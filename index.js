@@ -1,10 +1,12 @@
 function verificar() {
-  let idade = document.getElementById("idade").value;
-  let msg = document.getElementById("msg");
+  const idade = document.getElementById("idade").value;
+  const msg = document.getElementById("msg");
 
-  if (idade >= 18) {
-    msg.innerText = "Você é de maior";
+  if (idade === "") {
+    msg.innerText = "Digite uma idade";
+  } else if (idade < 18) {
+    msg.innerText = "Você é menor de idade 👶";
   } else {
-    msg.innerText = "Você é de menor";
+    msg.innerText = "Você é maior de idade 😎";
   }
 }
